@@ -1,5 +1,4 @@
-Create database WebServices;
-USE WebServices;
+USE simonanswywayne;
 Create table socialUser(id int NOT NULL AUTO_INCREMENT, pseudo varchar(255), PRIMARY KEY(id));
 create table picture(id int NOT NULL AUTO_INCREMENT, imgName varchar(255),PRIMARY KEY (id));
 Create table publishing(id int NOT NULL AUTO_INCREMENT, imgId int, userId int NOT NULL, content varchar(300), PRIMARY KEY(id),CONSTRAINT FK_PUB_USERID FOREIGN KEY (userId) REFERENCES socialUser(id), CONSTRAINT FK_PUB_IMGID FOREIGN KEY (imgId) REFERENCES picture(id));
